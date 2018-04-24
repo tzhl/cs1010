@@ -23,7 +23,7 @@ int main(void) {
 
 	return 0;
 }
-
+/*
 // Count the number of valid north-east paths.
 int ne(int x, int y) {
 
@@ -36,3 +36,13 @@ int ne(int x, int y) {
    else// if(x!=0&&y==0)
       return ne(x-1,y);
 }
+*/
+
+int ne(int x, int y) {
+
+   if(x==0 || y==0)
+      return 1;
+   else 
+      return ne(x-1,y)+ne(x,y-1);
+}
+
